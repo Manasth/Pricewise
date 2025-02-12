@@ -9,9 +9,6 @@ import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import React from 'react'
 
-type Props = {
-    params: { id: string }
-}
 
 const ProductDetails = async ({params}: {params: Promise<{ id: string }>}) => {
     const id = (await (params)).id;

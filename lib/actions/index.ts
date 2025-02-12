@@ -8,7 +8,6 @@ import { getAveragePrice, getHighestPrice, getLowestPrice } from "../utils";
 import { User } from "@/types";
 import { generateEmailBody, sendEmail } from "../nodemailer";
 import mongoose from "mongoose";
-import { version } from "node:punycode";
 
 export async function scrapeAndStoreProduct(productUrl: string) {
     console.log(productUrl);

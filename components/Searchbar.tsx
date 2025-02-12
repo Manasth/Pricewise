@@ -1,6 +1,5 @@
 "use client"
 import { scrapeAndStoreProduct } from '@/lib/actions';
-import { scrapeAmazonProduct } from '@/lib/scraper';
 import { FormEvent, useState } from 'react'
 
 const isValidAmazonProductURL = (url:string) => {
@@ -27,6 +26,7 @@ const isValidAmazonProductURL = (url:string) => {
 const Searchbar = () => {
   const [searchPrompt, setSearchPrompt] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 

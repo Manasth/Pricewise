@@ -1,7 +1,7 @@
 "use client"
 
-import React, {EventHandler, FormEvent, Fragment, useState} from 'react'
-import { Description, Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react'
+import React, { FormEvent, Fragment, useState} from 'react'
+import { Dialog, Transition } from '@headlessui/react'
 import Image from 'next/image'
 import { addUserEmailToProduct } from '@/lib/actions'
 
@@ -122,7 +122,7 @@ const Modal = ({productId}: Props) => {
                                 type='submit'
                                 className='dialog-btn'
                                 >
-                                    Track
+                                    {isSubmitting ? 'Submitting...' : 'Track'}
                                 </button>
                             </form>
                         </div>
